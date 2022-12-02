@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended : false }));
 app.use(cors());
 
 app.set('build', path.join(__dirname, '../client'));
+app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, './client/build')));
 
 
