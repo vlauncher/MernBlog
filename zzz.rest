@@ -1,0 +1,56 @@
+# pages Endpoint
+
+# GET http://127.0.0.1:8000/
+
+# posts EndPoint
+
+# POST http://localhost:8000/posts/create/
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY3NjY0ODM0LCJleHAiOjE2Njc3MDgwMzR9.cFgeOXAmfreijHMdHu0UbFGOgrhr3bRc3Bim1wy-On4
+# Content-Type: application/json
+
+# {
+#     "topic" : "expressjs",
+#     "message" : "Its minimalistic" 
+# }
+
+# GET http://localhost:8000/posts/list/
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY3NjU4NTE4LCJleHAiOjE2Njc3MDE3MTh9.vB-F5qvURumTxnEb1TE6lbWQADMNPqZYpYnwWgnlJBs
+
+# PUT http://localhost:8000/posts/update/1
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY3NTk0ODA5LCJleHAiOjE2Njc2MzgwMDl9.zkoARGLvbeEzN1w8yivN11fkJCj6wZupmbSwYzy5c6Q
+
+# {
+#     "topic" : "Django3",
+#     "message" : "Its Batteries Included"
+# }
+
+# DELETE http://localhost:8000/posts/delete/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY3NTk0ODA5LCJleHAiOjE2Njc2MzgwMDl9.zkoARGLvbeEzN1w8yivN11fkJCj6wZupmbSwYzy5c6Q
+
+# users EndPoint
+
+# Register User
+
+# POST http://localhost:8000/auth/register/
+# Content-Type: application/json
+
+# {
+#     "first_name" : "Samson",
+#     "last_name" : "Amos",
+#     "email" : "v2dent@gmail.com",
+#     "password" : "Chelsea24462!"
+# }
+
+# Login User
+
+# POST http://localhost:8000/auth/login/
+# Content-Type: application/json
+
+# {
+#     "email" : "v2dent@gmail.com",
+#     "password" : "Chelsea24462!" 
+# }
+
+# GET http://localhost:8000/auth/users/
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjY3NTk0ODA5LCJleHAiOjE2Njc2MzgwMDl9.zkoARGLvbeEzN1w8yivN11fkJCj6wZupmbSwYzy5c6Q
