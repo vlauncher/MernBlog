@@ -13,15 +13,17 @@ app.use(express.urlencoded({ extended : false }));
 app.use(cors());
 
 app.set('build', path.join(__dirname, '../client'));
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, './client/build')));
 
 
 /* Routes setup */
 const usersRouter = require('./routes/usersRoutes');
 const postsRouter = require('./routes/postsRoutes');
-const pagesRoutes = require('./routes/pagesRoutes');
 
-app.use('/',pagesRoutes);
+
+app.get('/',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./client/build','index.html'))
+})
 app.use('/auth',usersRouter);
 app.use('/posts',postsRouter);
 
